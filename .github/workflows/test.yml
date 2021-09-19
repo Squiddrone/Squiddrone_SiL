@@ -20,8 +20,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
       run: |
-        # exit-zero: Force Flake8 to use the exit status code 0 even if there are errors.
-        flake8 . --exit-zero --config=.flake8
+        flake8 . --config=.flake8
     - name: Test with pytest
       run: |
         pytest
