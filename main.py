@@ -1,7 +1,6 @@
 
 import sys
 from PyQt6.QtWidgets import QApplication, QDialog
-from PyQt6 import QtGui, QtCore
 import gui
 
 
