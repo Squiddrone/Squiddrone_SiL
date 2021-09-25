@@ -9,6 +9,10 @@ class SilGui(QDialog):
         super(SilGui, self).__init__(parent)
         self.ui = gui.Ui_Dialog()
         self.ui.setupUi(self)
+        self.plot([1, 2, 3], [1, 2, 3])
+
+    def plot(self, x, y):
+        self.ui.graphWidget.plot(x, y)
 
 
 def main():
