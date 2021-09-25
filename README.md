@@ -12,13 +12,12 @@ sudo apt-get install qttools5-dev
 
 ## Open Qt Designer on Linux
 ```console
-cd /usr/lib/x86_64-linux-gnu/qt5/bin/ 
-./designer
+/usr/lib/x86_64-linux-gnu/qt5/bin/designer
 ```
 
 ## Convert .ui file into .py file
 ```console
-pyuic6 -x filename.ui -o filename.py
+pyuic6 -x gui.ui -o gui.py
 ```
 
 # Run SiL
