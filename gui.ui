@@ -29,7 +29,7 @@
     <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
    </property>
   </widget>
-  <widget class="PlotWidget" name="graphWidget" native="true">
+  <widget class="MplWidget" name="graphWidget" native="true">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -45,9 +45,9 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>PlotWidget</class>
+   <class>MplWidget</class>
    <extends>QWidget</extends>
-   <header>pyqtgraph</header>
+   <header>mplwidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

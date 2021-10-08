@@ -1,6 +1,6 @@
 
 import sys
-from PyQt6.QtWidgets import QApplication, QDialog
+from PyQt5.QtWidgets import QApplication, QDialog
 import gui
 
 
@@ -9,10 +9,12 @@ class SilGui(QDialog):
         super(SilGui, self).__init__(parent)
         self.ui = gui.Ui_Dialog()
         self.ui.setupUi(self)
-        self.plot([1, 2, 3], [1, 2, 3])
+        self.plot()
 
-    def plot(self, x, y):
-        self.ui.graphWidget.plot(x, y)
+    def plot(self):
+        x = range(0, 10)
+        y = range(0, 20, 2)
+        self.ui.graphWidget.canvas.ax.plot(x, y)
 
 
 def main():
