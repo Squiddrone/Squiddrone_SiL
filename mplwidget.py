@@ -1,7 +1,7 @@
 from PyQt5 import QtWidgets
 import matplotlib
 from matplotlib.figure import Figure
-from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as Canvas
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as Canvas, NavigationToolbar2QT as NavigationToolbar
 
 # Ensure using PyQt5 backend
 matplotlib.use('QT5Agg')
@@ -20,6 +20,8 @@ class MplWidget(QtWidgets.QWidget):
     def __init__(self, parent=None):
         QtWidgets.QWidget.__init__(self, parent)
         self.canvas = MplCanvas()
+        self.toolbar = NavigationToolbar(self.canvas, self)
         self.vbl = QtWidgets.QVBoxLayout()
+        self.vbl.addWidget(self.toolbar)
         self.vbl.addWidget(self.canvas)
         self.setLayout(self.vbl)
