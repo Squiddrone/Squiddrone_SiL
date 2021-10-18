@@ -32,7 +32,6 @@ class SilGui(QDialog):
 
     def plot(self):
         self.lines = self.update_lines(self.counter, self.data, self.lines)
-        _ = [self.ui.graphWidget.canvas.ax.plot(dat[0, 0:1], dat[1, 0:1], dat[2, 0:1])[0] for dat in self.data]
         self.ui.graphWidget.canvas.flush_events()
         self.ui.graphWidget.canvas.draw()
         self.counter += 1
