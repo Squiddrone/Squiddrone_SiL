@@ -12,6 +12,8 @@ class SilGui(QDialog):
         self.ui = gui.Ui_Dialog()
         self.ui.setupUi(self)
 
+        self.number_of_drones = 5
+
         self.initialize_plot()
 
         self.timer = QTimer(self)
@@ -21,7 +23,7 @@ class SilGui(QDialog):
         self.timer.start(100)
 
     def initialize_plot(self):
-        self.data = [self.gen_rand_line(100, 3) for index in range(5)]
+        self.data = [self.gen_rand_line(100, 3) for index in range(self.number_of_drones)]
         self.lines = [self.ui.graphWidget.canvas.ax.plot(dat[0, 0:1], dat[1, 0:1], dat[2, 0:1])[0] for dat in self.data]
         self.ui.graphWidget.canvas.ax.set_xlim3d([0.0, 10.0])
         self.ui.graphWidget.canvas.ax.set_xlabel('X')
