@@ -37,7 +37,6 @@ class SilGui(QDialog):
         self.ui.graphWidget.canvas.flush_events()
         self.ui.graphWidget.canvas.draw()
         self.counter += 1
-        print(self.counter)
         if self.counter > 100:
             self.timer.stop()
 
