@@ -19,7 +19,7 @@ class SilGui(QDialog):
         self.timer = QTimer(self)
         self.timer.timeout.connect(self.plot)
 
-        self.counter = 0
+        self.counter = 5
         self.timer.start(100)
 
     def initialize_plot(self):
@@ -50,8 +50,8 @@ class SilGui(QDialog):
 
     def update_lines(self, num, data_lines, lines):
         for line, data in zip(lines, data_lines):
-            line.set_data(data[0:2, :num])
-            line.set_3d_properties(data[2, :num])
+            line.set_data(data[0:2, num-5:num])
+            line.set_3d_properties(data[2, num-5:num])
         return lines
 
 
