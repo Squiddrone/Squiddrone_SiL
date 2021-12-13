@@ -1,5 +1,5 @@
 
-from source.drone import Drone
+from sil_framework.drone.drone import Drone
 
 
 class TestDrone:
