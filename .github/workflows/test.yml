@@ -26,4 +26,4 @@ jobs:
         pytest
     - name: Coverage with pytest
       run: |
-        pytest --cov=./source/ --cov-fail-under=100 ./
+        pytest --cov=./sil_framework/ --cov-fail-under=100 ./
