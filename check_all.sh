@@ -1,1 +1,1 @@
-call ./scripts/check_styleguide.sh
+./scripts/check_styleguide.sh
