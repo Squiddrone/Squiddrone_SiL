@@ -1,7 +1,7 @@
 # SiL for Squiddrone
 
 SiL System for the Squiddrone project, to implement and test Squiddrone drone collision algorithms on a desktop computer.
-Based on Python and PyQt6.
+Based on Python and PyQt.
 
 # Setup
 ## Setup PyQt for Linux
@@ -17,7 +17,7 @@ sudo apt-get install qttools5-dev
 
 ## Convert .ui file into .py file
 ```console
-pyuic6 -x gui.ui -o gui.py
+pyuic5 -x gui.ui -o gui.py
 ```
 
 # Run SiL
