@@ -1,0 +1,7 @@
+[flake8]
+count = True
+statistics = True
+exclude = .git,.config,.github,./venv/,gui.py
+max-complexity = 10
+show_source = True
+max-line-length = 120
