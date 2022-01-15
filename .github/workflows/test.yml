@@ -6,13 +6,15 @@ jobs:
   test:
     name: Test - ${{ github.event_name }}
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        python-version: ['3.8', '3.10']
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python 3.8
+    - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.8'
+        python-version: ${{ matrix.python-version }}
         architecture: 'x64'
     - name: Install dependencies
       run: |
